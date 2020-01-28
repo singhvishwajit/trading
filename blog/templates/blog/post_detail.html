@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="post-detail-page">
+		<div class="post-detail-page-wrapper">
+			<div class="blog-thumbnail">
+		    	<img class="post-detail-thumbnail" src="{{ object.thumbnail.url }}"/>
+		    </div>
+			<div class="post-detail-container-wrapper">
+				<article class="post-detail-wrapper">
+					<h2 class="article-title">{{ object.title }}</h2>
+		    		<div class="blog-body">
+				    	<p class="article-content">{{ object.content|safe }}</p>
+		    		</div>
+				</article>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

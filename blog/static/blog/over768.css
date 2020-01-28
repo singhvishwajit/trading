@@ -1,0 +1,11 @@
+/***** Home Page *****/
+.blog-wrapper {
+	width: 48%;
+	margin-bottom: 2rem;
+}
+
+/***** Newsletter Page *****/
+
+.newsletter-form-wrapper {
+	width: 50%;
+}

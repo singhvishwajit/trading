@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="newsletter-page">
+		<h2><center>Newsletter</center></h2>
+		<div class="newsletter-wrapper">
+			<div class="newsletter-form-wrapper">
+				<p>Subscribe to my newsletter to get new posts delivered straight to your inbox. No spam ever!</p>
+				<br>
+				<form method="POST">
+					{% csrf_token %}
+					<fieldset class="form-group">
+						{{ form|crispy }}	
+					</fieldset>
+					<div class="form-group">
+						<button class="btn btn-info" type="submit">Subscribe</button>
+					</div>
+				</form>
+			</div>	
+		</div>
+	</div>
+{% endblock content %}
