@@ -1,0 +1,1 @@
+web: gunicorn vishwajit_singh.wsgi
