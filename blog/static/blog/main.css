@@ -85,10 +85,10 @@ a.article-title:hover {
 }
 
 .account-img {
-  height: 125px;
-  width: 125px;
-  margin-right: 20px;
-  margin-bottom: 16px;
+  height: 100%;
+  width: 250px;
+  margin-bottom: 3rem;
+  border-radius: 5px;
 }
 
 .account-heading {
@@ -124,12 +124,40 @@ a:hover {
 
 /*** Blog Home **/
 
+.about-home-info {
+  background-color: #FFFFFF;
+  margin-bottom: 3rem;
+  margin-top: 6rem;
+  border: 1px ridge rgba(0,0,0,.125);
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .container-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   margin-top: 2rem;
+}
+
+.container-wrapper .nograde-home-wrapper {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, .125);
+  text-decoration: none;
+  color: #454547;
+  padding: 4rem 2rem 4rem 2rem;
+}
+
+.notes-wrapper {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, .125);
+  margin-bottom: 3rem;
+  text-decoration: none;
+  color: #454547;
+  padding: 4rem 2rem 4rem 2rem;
 }
 
 .blog-wrapper {
@@ -154,40 +182,33 @@ a:hover {
   color: #454547;
 }
 
-.about-home-info {
-  background-color: #FFFFFF;
-  margin-bottom: 2rem;
-  margin-top: 7rem;
-  border: 1px ridge rgba(0,0,0,.125);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.blog-body h2 {
+  color: black;
 }
 
 .about-page {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
 }
 
 .articles-page {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
 }
 
 .contact-page {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .newsletter-page {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .services-page {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 /******************** Footer ********************/
@@ -262,9 +283,7 @@ a:hover {
 .newsletter-wrapper {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 2rem;
   padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .newsletter-form-wrapper {
@@ -290,8 +309,6 @@ a:hover {
 
 .post-detail-page-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   margin-top: 1.2rem;
 }
 
@@ -301,14 +318,8 @@ a:hover {
 }
 
 .post-detail-wrapper {
-  width: 60%;
+  width: 100%;
   margin-bottom: 2rem;
-}
-
-.post-detail-margin {
-  width: 25%;
-  padding-right: 1rem;
-  margin-top: 8rem;
 }
 
 .article-title {

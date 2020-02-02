@@ -28,7 +28,7 @@ def ContactSuccess(request):
 def articles(request):
 	context = {
 		'posts': Post.objects.all(),
-		'title': 'Articles'
+		'title': 'Notes'
 	}
 	return render(request, 'blog/articles.html', context)
 

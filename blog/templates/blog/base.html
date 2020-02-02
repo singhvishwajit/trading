@@ -9,6 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
     <link rel="stylesheet" media="screen and (min-width:768px)" href="{% static 'blog/over768.css' %}">
 
@@ -32,7 +34,7 @@
 		    	<div class="collapse navbar-collapse" id="navbarToggle">
 		        	<div class="navbar-nav mr-auto ml-auto">
 		          		<a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
-		          		<a class="nav-item nav-link" href="{% url 'blog-articles' %}">Articles</a>
+		          		<a class="nav-item nav-link" href="{% url 'blog-articles' %}">Notes</a>
 		          		<a class="nav-item nav-link" href="{% url 'blog-services' %}">Services</a>
 		          		<a class="nav-item nav-link" href="{% url 'blog-newsletter' %}">Newsletter</a>
 		          		<a class="nav-item nav-link" href="{% url 'blog-contact' %}">Contact</a>
@@ -63,7 +65,7 @@
 					<div class="footer-column-one">
 						<h5>Vishwajit Singh</h5>
 						<br>
-						<p>Writer, counselor and founder of NoGrade Academy</p>
+						<p>Web developer, writer and founder of NoGrade</p>
 								
 					</div>
 
@@ -71,10 +73,10 @@
 						<br>
 						<br>
 						<a href="{% url 'blog-about' %}">About</a>
-						<a href="{% url 'blog-articles' %}">Articles</a>
+						<a href="{% url 'blog-articles' %}">Notes</a>
 						<a href="{% url 'blog-services' %}">Services</a>
-						<a href="{% url 'blog-contact' %}">Contact</a>
-						<a href="{% url 'blog-newsletter' %}">Newsletter</a>	
+						<a href="{% url 'blog-newsletter' %}">Newsletter</a>
+						<a href="{% url 'blog-contact' %}">Contact</a>	
 					</div>
 
 					<div class="social-media-links">

@@ -1,8 +1,32 @@
 /***** Home Page *****/
+
+.about-home-info {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.about-content {
+	padding-right: 4rem;
+}
+
+.about-image {
+	padding-right: 4rem;
+}
+
+.container-wrapper {
+	margin-bottom: 3rem;
+}
+
 .blog-wrapper {
 	width: 48%;
 	margin-bottom: 2rem;
 }
+
+
+.notes-wrapper {
+	width: 48%;
+}
+
 
 /***** Newsletter Page *****/
 

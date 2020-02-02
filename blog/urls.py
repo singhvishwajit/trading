@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from .views import PostDetailView, ContactCreateView, NewsletterCreateView
 from . import views
 
@@ -12,4 +12,5 @@ urlpatterns = [
 	path('services/', views.services, name='blog-services'),
 	path('contact/', ContactCreateView.as_view(), name='blog-contact'),
 	path('contact/success', views.ContactSuccess, name='blog-contact-success'),
+	path('tinymce/', include('tinymce.urls')),
 ]

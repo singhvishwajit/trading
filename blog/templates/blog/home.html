@@ -1,24 +1,37 @@
 {% extends "blog/base.html" %}
+{% load static %}
 {% block content %}
     <div class="about-home-info">
-        <p>Hi there, I am Vishwajit Singh. I am an independent <a href="{% url 'blog-articles' %}">writer</a>, <a href="{% url 'blog-services' %}">counselor</a> and founder of <a href="https://nograde.herokuapp.com/">NoGrade Academy</a>.</p>
-        <p>You can visit my <a href="{% url 'blog-about' %}">about</a> page for a more detailed description of who I am, my values, current beliefs, past work and interests.</p>
-        <p>In case you would like to get in touch with me in connection with my writing, services or for feedback on NoGrade Academy courses, please do not hesitate to <a href="{% url 'blog-contact' %}">contact</a> me. I like helping people.</p>
+        <div class="about-image">
+            <center><img class="account-img" src="{% static 'vs.jpg' %}"></center>
+        </div>
+        <div class="about-content">
+            <p>Hi there, I am Vishwajit Singh. I am an independent <a href="{% url 'blog-services' %}">web developer</a>, <a href="{% url 'blog-articles' %}">writer</a>,  and founder of <a href="https://nograde.herokuapp.com/">Nograde</a>.</p>
+            <p>You can visit my <a href="{% url 'blog-about' %}">about</a> page for a detailed description of who I am, my values, current beliefs, past work and interests.</p>
+            <p>In case you would like to get in touch with me in connection with my writing, services or for feedback on Nograde, please do not hesitate to <a href="{% url 'blog-contact' %}">contact</a> me. I like helping people.</p>
+        </div>
     </div>
-    <h2>Latest Posts</h2>
     <div class="container-wrapper">
-        {% for post in posts %}
-            <a class="blog-wrapper" href="{% url 'post-detail' post.slug %}">
-                <div class="blog-thumbnail">
-                  <img class="thumbnail" src="{{ post.thumbnail.url }}"/>
-                </div>
-                <div class="blog-body">
-                  <h5>{{ post.title }}</h5>
-                  <p class="article-content">{{ post.snippet|safe }}</p>
-                </div>
-            </a>
-        {% endfor %}  
+        <a class="nograde-home-wrapper" href="https://nograde.herokuapp.com/">
+            <div class="blog-body">
+              <h2>Nograde</h2>
+              <p class="article-content">Visit Nograde for insights and ideas on the human condition.</p>
+            </div>
+            <button class="btn btn-danger" href="https://nograde.herokuapp.com/">Visit Nograde</button>
+        </a>
     </div>
-    <div class="all-articles-button"><center><a class="btn btn-info" href="{% url 'blog-articles' %}">See all articles</a></center></div>
+    <div class="container-wrapper">
+        <a class="notes-wrapper" href="{% url 'blog-articles' %}">
+            <div class="notes-wrapper-body">
+              <h2>Technical Notes</h2>
+            </div>
+        </a>
+        <a class="notes-wrapper" href="{% url 'blog-articles' %}">
+            <div class="notes-wrapper-body">
+              <h2>Non-Technical Notes</h2>
+            </div>
+        </a>
+    </div>
+    
 {% endblock content %}
 
