@@ -1,13 +1,13 @@
 {% extends "blog/base.html" %}
 {% block content %}
 	<div class="articles-page">
-		<h2><center>Trading Notes</center></h2>
+		<h2><center>Project Reviews</center></h2>
 	    <div class="container-wrapper">
-	      	{% for post in posts %}
-	    		<a class="blog-wrapper" href="{% url 'post-detail' post.slug %}">
+	      	{% for project in projects %}
+	    		<a class="blog-wrapper" href="{% url 'project-detail' project.slug %}">
 			        <div class="blog-body">
-			            <h5>{{ post.title }}</h5>
-			            <p class="article-content">{{ post.details|safe }}</p>
+			            <h5>{{ project.title }}</h5>
+			            <p class="article-content">{{ project.details|safe }}</p>
 			        </div>
 	    		</a>
 	  		{% endfor %}

@@ -17,9 +17,25 @@
 	margin-bottom: 3rem;
 }
 
+a.home-categories{
+	width: 32%;
+	height: 200px;
+	border: 1px solid rgba(0, 0, 0, .125);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 8rem;
+  text-align: center;
+}
+
+.container-wrapper .nograde-home-wrapper {
+  width: 30%;
+}
+
 .blog-wrapper {
-	width: 48%;
+	width: 32%;
+	height: 200px;
 	margin-bottom: 2rem;
+	padding-top: 1rem;
 }
 
 

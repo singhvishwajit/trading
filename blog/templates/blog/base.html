@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Required meta tags -->
+  <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -15,91 +15,88 @@
     <link rel="stylesheet" media="screen and (min-width:768px)" href="{% static 'blog/over768.css' %}">
 
     <!-- Font Awesome script -->
-	<script src="https://kit.fontawesome.com/a28ba7e7ad.js"></script>
+  <script src="https://kit.fontawesome.com/a28ba7e7ad.js"></script>
 
-	{% if title %}
-		<title>Vishwajit Singh - {{ title }}</title>
-	{% else %}
-		<title>Vishwajit Singh | Independent creator</title>
-	{% endif %}
+  {% if title %}
+    <title>Vishwajit Singh - {{ title }}</title>
+  {% else %}
+    <title>Vishwajit Singh - Trader | Investor | Educator </title>
+  {% endif %}
 </head>
 <body>
-	<header class="site-header">
-  		<nav class="navbar navbar-expand-md navbar-light bg-steel fixed-top">
-		    <div class="container">
-		    	<a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Vishwajit Singh</a>
-		    	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-		    		<span class="navbar-toggler-icon"></span>
-		      	</button>
-		    	<div class="collapse navbar-collapse" id="navbarToggle">
-		        	<div class="navbar-nav mr-auto ml-auto">
-		          		<a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
-		          		<a class="nav-item nav-link" href="{% url 'blog-articles' %}">Notes</a>
-		          		<a class="nav-item nav-link" href="{% url 'blog-services' %}">Services</a>
-		          		<a class="nav-item nav-link" href="{% url 'blog-newsletter' %}">Newsletter</a>
-		          		<a class="nav-item nav-link" href="{% url 'blog-contact' %}">Contact</a>
-		        	</div>
+  <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-light bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Vishwajit Singh</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="{% url 'blog-defi' %}">DeFi</a>
+                <a class="nav-item nav-link" href="{% url 'blog-articles' %}">Trading</a>
+                <a class="nav-item nav-link" href="{% url 'blog-investment' %}">Investment</a>
+                <a class="nav-item nav-link" href="{% url 'blog-projects' %}">Projects</a>
+                <a class="nav-item nav-link" href="{% url 'blog-resources' %}">Resources</a>
+                <a class="nav-item nav-link" href="{% url 'blog-contact' %}">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+  </header>
 
-		        	<!-- Navbar Right Side -->
-        			<div class="navbar-nav">
-          				<button class="btn btn-outline-danger" href="https://nograde.herokuapp.com/">NoGrade Academy</button>
-        			</div>
-		      	</div>
-		    </div>
-  		</nav>
-	</header>
+  <main role="main" class="container">
+    <div class="row">
+        <div class="col-md-12">
+          {% block content %}{% endblock %}
+        </div>
+    </div>
+  </main>
 
-	<main role="main" class="container">
-		<div class="row">
-		    <div class="col-md-12">
-		      {% block content %}{% endblock %}
-		    </div>
-		</div>
-	</main>
+    <!-- footer -->
+  <footer>
+    <div class="footer-row">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-column-one">
+            <h5>Vishwajit Singh</h5>
+            <br>
+            <p>Independent web3 professional interested in DeFi, trading, and investment.</p>
+                
+          </div>
 
-		<!-- footer -->
-	<footer>
-		<div class="footer-row">
-			<div class="container">
-				<div class="footer-wrapper">
-					<div class="footer-column-one">
-						<h5>Vishwajit Singh</h5>
-						<br>
-						<p>Web developer, writer and founder of NoGrade</p>
-								
-					</div>
+          <div class="footer-column-three">
+            <br>
+            <br>
+            <a href="{% url 'blog-defi' %}">DeFi</a>
+            <a href="{% url 'blog-articles' %}">Trading</a>
+            <a href="{% url 'blog-investment' %}">Investment</a>
+            <a href="{% url 'blog-projects' %}">Projects</a>
+            <a href="{% url 'blog-resources' %}">Resources</a>
+            <a href="{% url 'blog-contact' %}">Contact</a>  
+          </div>
 
-					<div class="footer-column-three">
-						<br>
-						<br>
-						<a href="{% url 'blog-about' %}">About</a>
-						<a href="{% url 'blog-articles' %}">Notes</a>
-						<a href="{% url 'blog-services' %}">Services</a>
-						<a href="{% url 'blog-newsletter' %}">Newsletter</a>
-						<a href="{% url 'blog-contact' %}">Contact</a>	
-					</div>
-
-					<div class="social-media-links">
-				    	<br>
-				    	<br>
-				      	<a href="https://twitter.com/vishwajitsingh/" target="_blank">Twitter
-				      	</a>
-			      		<a href="https://github.com/singhvishwajit/" target="_blank">Github
-			      		</a>
-			      		<a href="https://www.linkedin.com/in/singhvishwajit/" target="_blank">LinkedIn
-				      	</a>
-				    </div>
+          <div class="social-media-links">
+              <br>
+              <br>
+                <a href="https://twitter.com/vishwajitsingh/" target="_blank">Twitter
+                </a>
+                <a href="https://github.com/singhvishwajit/" target="_blank">Github
+                </a>
+                <a href="https://www.linkedin.com/in/singhvishwajit/" target="_blank">LinkedIn
+                </a>
+            </div>
 
 
-				</div>
-			   	<div class="copyright">
-			      	<p>© 2019 Copyright | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></p>
-			    </div>
-			</div>
-		</div>
-	</footer>
-	
-	<!-- Optional JavaScript -->
+        </div>
+          <div class="copyright">
+              <p>© 2021 Copyright | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></p>
+          </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
