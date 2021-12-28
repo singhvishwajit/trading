@@ -164,7 +164,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'assets'),
-    os.path.join(BASE_DIR,'dist'),
 )
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID_VS')
