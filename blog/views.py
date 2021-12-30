@@ -18,6 +18,13 @@ def home(request):
 def resources(request):
 	return render(request, 'blog/resources.html', {'title': 'Resources'})
 
+def privacy(request):
+	return render(request, 'blog/privacy.html', {'title': 'Privacy'})
+
+def terms(request):
+	return render(request, 'blog/terms.html', {'title': 'Terms of Use'})
+
+
 class TradingDetailView(DetailView):
 	model = Trading
 

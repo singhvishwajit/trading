@@ -16,6 +16,8 @@ urlpatterns = [
 	path('investment/<slug:slug>/', InvestmentDetailView.as_view(), name='investment-detail'),
 	path('project/<slug:slug>/', ProjectDetailView.as_view(), name='project-detail'),
 	path('contact/', ContactCreateView.as_view(), name='blog-contact'),
+	path('privacy/', views.privacy, name='blog-privacy'),
+	path('terms/', views.terms, name='blog-terms'),
 	path('contact/success', views.ContactSuccess, name='blog-contact-success'),
 	path('tinymce/', include('tinymce.urls')),
 ]

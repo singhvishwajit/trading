@@ -49,3 +49,42 @@ a.home-categories{
 .newsletter-form-wrapper {
 	width: 50%;
 }
+
+
+/***** Privacy Page *****/
+
+.privacy-page-wrapper {
+	margin-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.privacy-heading {
+  padding-bottom: 2rem;
+}
+.privacy-heading h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3d3e44;
+  line-height: 1.25;
+  font-color: #3d3e44;
+}
+
+
+/***** Terms Page ******/
+
+.terms-page-wrapper {
+  margin-top: 4rem;
+  padding-bottom: 4rem
+}
+
+.terms-heading {
+  padding-bottom: 2rem;
+}
+
+.terms-heading h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3d3e44;
+  line-height: 1.25;
+  font-color: #3d3e44;
+}
