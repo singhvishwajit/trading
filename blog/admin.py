@@ -1,10 +1,10 @@
 from django.contrib import admin
 from tinymce.widgets import TinyMCE
-from .models import Post, DeFi, Project, Investment
+from .models import Trading, DeFi, Project, Investment
 from django.db import models
 
 
-class PostAdmin(admin.ModelAdmin):
+class TradingAdmin(admin.ModelAdmin):
 	fieldsets = [
         ("Title/date", {'fields': ["title", "date_posted"]}),
         ("Content", {"fields": ["content"]}),
@@ -63,7 +63,7 @@ class InvestmentAdmin(admin.ModelAdmin):
     }
 
 
-admin.site.register(Post, PostAdmin)
+admin.site.register(Trading, TradingAdmin)
 admin.site.register(DeFi, DeFiAdmin)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(Investment, InvestmentAdmin)

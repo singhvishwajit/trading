@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from .models import Post, DeFi, Project, Contact, Investment
+from .models import Trading, DeFi, Project, Contact, Investment
 from django.views.generic import ListView, DetailView, CreateView
 
 def home(request):
 	context = {
-		'posts': Post.objects.all() [:4]
+		'tradings': Trading.objects.all() [:4]
 	}
 	return render(request, 'blog/home.html', context)
 
@@ -18,8 +18,8 @@ def home(request):
 def resources(request):
 	return render(request, 'blog/resources.html', {'title': 'Resources'})
 
-class PostDetailView(DetailView):
-	model = Post
+class TradingDetailView(DetailView):
+	model = Trading
 
 class DeFiDetailView(DetailView):
 	model = DeFi
@@ -45,10 +45,10 @@ def ContactSuccess(request):
 # 	}
 # 	return render(request, 'blog/articles.html', context)
 
-class PostListView(ListView):
-	model = Post
-	template_name = 'blog/articles.html' # <app>/<model>_<viewtype>.html
-	context_object_name = 'posts'
+class TradingListView(ListView):
+	model = Trading
+	template_name = 'blog/trading.html' # <app>/<model>_<viewtype>.html
+	context_object_name = 'tradings'
 	ordering = ['-date_posted']
 	paginate_by = 6
 	def get_context_data(self, **kwargs):
@@ -56,7 +56,7 @@ class PostListView(ListView):
         	context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         	
-        	context['title'] = 'Learn'
+        	context['title'] = 'Trading Notes'
         	return context
 
 
@@ -71,7 +71,7 @@ class DeFiListView(ListView):
         	context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         	
-        	context['title'] = 'Learn'
+        	context['title'] = 'DeFi Notes'
         	return context
 
 class ProjectListView(ListView):
@@ -85,7 +85,7 @@ class ProjectListView(ListView):
         	context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         	
-        	context['title'] = 'Learn'
+        	context['title'] = 'Project Reviews'
         	return context
 
 class InvestmentListView(ListView):
@@ -99,5 +99,5 @@ class InvestmentListView(ListView):
         	context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         	
-        	context['title'] = 'Learn'
+        	context['title'] = 'Investment Notes'
         	return context

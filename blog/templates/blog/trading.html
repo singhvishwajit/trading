@@ -3,11 +3,11 @@
 	<div class="articles-page">
 		<h2><center>Trading Notes</center></h2>
 	    <div class="container-wrapper">
-	      	{% for post in posts %}
-	    		<a class="blog-wrapper" href="{% url 'post-detail' post.slug %}">
+	      	{% for trading in tradings %}
+	    		<a class="blog-wrapper" href="{% url 'trading-detail' trading.slug %}">
 			        <div class="blog-body">
-			            <h5>{{ post.title }}</h5>
-			            <p class="article-content">{{ post.details|safe }}</p>
+			            <h5>{{ trading.title }}</h5>
+			            <p class="article-content">{{ trading.details|safe }}</p>
 			        </div>
 	    		</a>
 	  		{% endfor %}
