@@ -1,7 +1,8 @@
 {% extends "blog/base.html" %}
 {% block content %}
 	<div class="articles-page">
-		<h2><center>Project Reviews</center></h2>
+		<h2><center>Projects</center></h2>
+		<p><center>( Coming soon... )</center></p>
 	    <div class="container-wrapper">
 	      	{% for project in projects %}
 	    		<a class="blog-wrapper" href="{% url 'project-detail' project.slug %}">
