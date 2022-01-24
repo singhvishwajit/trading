@@ -88,3 +88,7 @@ a.home-categories{
   line-height: 1.25;
   font-color: #3d3e44;
 }
+
+.blog-body {
+	padding-right: 10rem;
+}

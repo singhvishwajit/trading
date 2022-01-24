@@ -12,11 +12,11 @@
 	    		</a>
 	  		{% endfor %}
 		</div>
-		<div class="paginator">
+<!-- 	 	<div class="paginator">
 			{% if is_paginated %}
 		    	{% if page_obj.has_previous %}
 		        	<a class="btn btn-outline-dark" href="?page=1">First</a>
-<!-- 		        	<a class="btn btn-outline-dark" href="?page={{ page_obj.previous_page_number }}">Previous</a> -->
+		        	<a class="btn btn-outline-dark" href="?page={{ page_obj.previous_page_number }}">Previous</a>
 		      	{% endif %}
 		      	
 		      	{% for num in page_obj.paginator.page_range %}
@@ -29,9 +29,9 @@
 
 		      	{% if page_obj.has_next %}
 		        	<a class="btn btn-outline-dark" href="?page={{ page_obj.next_page_number }}">Next</a>
-<!-- 		        	<a class="btn btn-outline-dark" href="?page={{ page_obj.paginator.num_pages }}">Last</a> -->
-		      	{% endif %}
-		    {% endif %}
-		</div>
+ 		        	<a class="btn btn-outline-dark" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+			    {% endif %}
+		    {% endif %} -->
+		<!-- </div> --> 
 	</div>
 {% endblock content %}

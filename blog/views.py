@@ -57,7 +57,7 @@ class TradingListView(ListView):
 	template_name = 'blog/trading.html' # <app>/<model>_<viewtype>.html
 	context_object_name = 'tradings'
 	ordering = ['-date_posted']
-	paginate_by = 6
+	# paginate_by = 6
 	def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         	context = super().get_context_data(**kwargs)
@@ -72,7 +72,7 @@ class DeFiListView(ListView):
 	template_name = 'blog/defi.html' # <app>/<model>_<viewtype>.html
 	context_object_name = 'defis'
 	ordering = ['-date_posted']
-	paginate_by = 6
+	# paginate_by = 6
 	def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         	context = super().get_context_data(**kwargs)
@@ -86,7 +86,7 @@ class ProjectListView(ListView):
 	template_name = 'blog/projects.html' # <app>/<model>_<viewtype>.html
 	context_object_name = 'projects'
 	ordering = ['-date_posted']
-	paginate_by = 6
+	# paginate_by = 6
 	def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         	context = super().get_context_data(**kwargs)
@@ -100,7 +100,7 @@ class InvestmentListView(ListView):
 	template_name = 'blog/investment.html' # <app>/<model>_<viewtype>.html
 	context_object_name = 'investments'
 	ordering = ['-date_posted']
-	paginate_by = 6
+	# paginate_by = 6
 	def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         	context = super().get_context_data(**kwargs)
