@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from .models import Trading, DeFi, Project, Contact, Investment
+from .models import Trading, DeFi, Project, Contact, Blockchain
 from django.views.generic import ListView, DetailView, CreateView
 
 def home(request):
@@ -34,8 +34,8 @@ class DeFiDetailView(DetailView):
 class ProjectDetailView(DetailView):
 	model = Project
 
-class InvestmentDetailView(DetailView):
-	model = Investment
+class BlockchainDetailView(DetailView):
+	model = Blockchain
 
 class ContactCreateView(CreateView):
     model = Contact
@@ -95,10 +95,10 @@ class ProjectListView(ListView):
         	context['title'] = 'Project Reviews'
         	return context
 
-class InvestmentListView(ListView):
-	model = Investment
-	template_name = 'blog/investment.html' # <app>/<model>_<viewtype>.html
-	context_object_name = 'investments'
+class BlockchainListView(ListView):
+	model = Blockchain
+	template_name = 'blog/blockchain.html' # <app>/<model>_<viewtype>.html
+	context_object_name = 'blockchains'
 	ordering = ['-date_posted']
 	# paginate_by = 6
 	def get_context_data(self, **kwargs):
@@ -106,5 +106,5 @@ class InvestmentListView(ListView):
         	context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         	
-        	context['title'] = 'Investment Notes'
+        	context['title'] = 'Blockchain Notes'
         	return context

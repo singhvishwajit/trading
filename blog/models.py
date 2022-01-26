@@ -65,7 +65,7 @@ class Project(models.Model):
 		return self.content[:200]
 
 
-class Investment(models.Model):
+class Blockchain(models.Model):
 	title = models.CharField(max_length=100)
 	content = models.TextField()
 	details = models.TextField(default='hello')

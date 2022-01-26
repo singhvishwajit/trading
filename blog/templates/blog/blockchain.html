@@ -3,12 +3,12 @@
 	<div class="articles-page">
 		<h2><center>Blockchain Fundamentals</center></h2>
 	    <div class="container-wrapper">
-	      	{% for investment in investments %}
-	    		<a class="blog-wrapper" href="{% url 'investment-detail' investment.slug %}">
+	      	{% for blockchain in blockchains %}
+	    		<a class="blog-wrapper" href="{% url 'blockchain-detail' blockchain.slug %}">
 			        <div class="blog-body">
 
-			            <h5>{{ investment.title }}</h5>
-			            <p class="article-content">{{ investment.details|safe }}</p>
+			            <h5>{{ blockchain.title }}</h5>
+			            <p class="article-content">{{ blockchain.details|safe }}</p>
 			        </div>
 	    		</a>
 	  		{% endfor %}
