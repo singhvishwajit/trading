@@ -1,6 +1,6 @@
 from django.contrib import admin
 from tinymce.widgets import TinyMCE
-from .models import Trading, DeFi, Project, Blockchain
+from .models import Trading, DeFi, Investment, Blockchain
 from django.db import models
 
 
@@ -34,7 +34,7 @@ class DeFiAdmin(admin.ModelAdmin):
     }
 
 
-class ProjectAdmin(admin.ModelAdmin):
+class InvestmentAdmin(admin.ModelAdmin):
     fieldsets = [
         ("Title/date", {'fields': ["title", "date_posted"]}),
         ("Content", {"fields": ["content"]}),
@@ -65,5 +65,5 @@ class BlockchainAdmin(admin.ModelAdmin):
 
 admin.site.register(Trading, TradingAdmin)
 admin.site.register(DeFi, DeFiAdmin)
-admin.site.register(Project, ProjectAdmin)
+admin.site.register(Investment, InvestmentAdmin)
 admin.site.register(Blockchain, BlockchainAdmin)
