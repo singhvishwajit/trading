@@ -47,7 +47,7 @@ class DeFi(models.Model):
 		return self.content[:200]
 
 
-class Investment(models.Model):
+class Protocol(models.Model):
 	title = models.CharField(max_length=100)
 	content = models.TextField()
 	details = models.TextField(default='hello')

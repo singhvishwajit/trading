@@ -20,7 +20,7 @@
   {% if title %}
     <title>Vishwajit Singh - {{ title }}</title>
   {% else %}
-    <title>Vishwajit Singh - DeFi | Trading | Investment </title>
+    <title>Vishwajit Singh - DeFi Analyst | Trader </title>
   {% endif %}
 </head>
 <body>
@@ -33,10 +33,9 @@
             </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="{% url 'blog-blockchain' %}">Blockchain</a>
                 <a class="nav-item nav-link" href="{% url 'blog-defi' %}">DeFi</a>
+                <a class="nav-item nav-link" href="{% url 'blog-protocols' %}">Protocols</a>
                 <a class="nav-item nav-link" href="{% url 'blog-trading' %}">Trading</a>
-                <a class="nav-item nav-link" href="{% url 'blog-investments' %}">Investment</a>
                 <a class="nav-item nav-link" href="{% url 'blog-resources' %}">Resources</a>
                 <a class="nav-item nav-link" href="{% url 'blog-contact' %}">Contact</a>
             </div>
@@ -61,17 +60,16 @@
           <div class="footer-column-one">
             <h5>Vishwajit Singh</h5>
             <br>
-            <p>DeFi | Trading | Investment</p>
+            <p>DeFi Analyst | Trader</p>
                 
           </div>
 
           <div class="footer-column-three">
             <br>
             <br>
-            <a href="{% url 'blog-blockchain' %}">Blockchain</a>
             <a href="{% url 'blog-defi' %}">DeFi</a>
+            <a href="{% url 'blog-protocols' %}">Protocols</a>
             <a href="{% url 'blog-trading' %}">Trading</a>    
-            <a href="{% url 'blog-investments' %}">Investment</a>
             <a href="{% url 'blog-resources' %}">Resources</a>
             <a href="{% url 'blog-contact' %}">Contact</a>  
           </div>
