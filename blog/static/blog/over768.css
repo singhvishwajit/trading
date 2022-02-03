@@ -38,6 +38,13 @@ a.home-categories{
 	padding-top: 1rem;
 }
 
+.protocol-wrapper {
+	width: 32%;
+	height: 200px;
+	margin-bottom: 2rem;
+	padding-top: 1rem;
+}
+
 
 .notes-wrapper {
 	width: 48%;

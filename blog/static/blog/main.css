@@ -186,6 +186,14 @@ a.home-categories{
   box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);
 }
 
+a.protocol-wrapper {
+  width: 32%;
+  border: 1px solid rgba(0, 0, 0, .125);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);
+}
+
 .thumbnail {
   height: 30vh;
   width: 100%;
@@ -195,7 +203,16 @@ a.home-categories{
   padding: 1rem;
 }
 
+.protocol-wrapper .blog-body {
+  padding: 1rem;
+}
+
 .container-wrapper .blog-wrapper {
+  text-decoration: none;
+  color: #454547;
+}
+
+.container-wrapper .protocol-wrapper {
   text-decoration: none;
   color: #454547;
 }

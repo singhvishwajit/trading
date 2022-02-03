@@ -4,7 +4,7 @@
 		<h2><center>DeFi Protocols</center></h2>
 	    <div class="container-wrapper">
 	      	{% for protocol in protocols %}
-	    		<a class="blog-wrapper" href="{% url 'protocol-detail' protocol.slug %}">
+	    		<a class="protocol-wrapper" href="{% url 'protocol-detail' protocol.slug %}">
 			        <div class="blog-body">
 			            <h5>{{ protocol.title }}</h5>
 			            <p class="article-content">{{ protocol.details|safe }}</p>
