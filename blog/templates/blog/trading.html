@@ -6,8 +6,8 @@
 	      	{% for trading in tradings %}
 	    		<a class="blog-wrapper" href="{% url 'trading-detail' trading.slug %}">
 			        <div class="blog-body">
+			        	<video src="{{ post.video.url }}" controls></video>
 			            <h5>{{ trading.title }}</h5>
-			            <video src="{{ post.video.url }}" controls></video>
 			            <p class="article-content">{{ trading.details|safe }}</p>
 			        </div>
 	    		</a>

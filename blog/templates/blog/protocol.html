@@ -6,8 +6,8 @@
 	      	{% for protocol in protocols %}
 	    		<a class="protocol-wrapper" href="{% url 'protocol-detail' protocol.slug %}">
 			        <div class="blog-body">
+			        	<video src="{{ post.video.url }}" controls></video>
 			            <h5>{{ protocol.title }}</h5>
-			            <video src="{{ post.video.url }}" controls></video>
 			            <p class="article-content">{{ protocol.details|safe }}</p>
 			        </div>
 	    		</a>
