@@ -32,15 +32,13 @@ a.home-categories{
 }
 
 .blog-wrapper {
-	width: 100%;
-	height: 200px;
+	width: 48%;
 	margin-bottom: 2rem;
 	padding-top: 1rem;
 }
 
-.protocol-wrapper {
-	width: 32%;
-	height: 200px;
+a.protocol-wrapper {
+	width: 48%;
 	margin-bottom: 2rem;
 	padding-top: 1rem;
 }
@@ -94,4 +92,9 @@ a.home-categories{
   color: #3d3e44;
   line-height: 1.25;
   font-color: #3d3e44;
+}
+
+.blog-body {
+  padding-left: 13rem;
+  padding-right: 13rem;
 }

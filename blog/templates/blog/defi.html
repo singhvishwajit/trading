@@ -7,6 +7,7 @@
 	    		<a class="blog-wrapper" href="{% url 'defi-detail' defi.slug %}">
 			        <div class="blog-body">
 			            <h5>{{ defi.title }}</h5>
+			            <video src="{{ post.video.url }}" controls></video>
 			            <p class="article-content">{{ defi.details|safe }}</p>
 			        </div>
 	    		</a>

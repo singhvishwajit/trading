@@ -7,6 +7,7 @@
 				<article class="post-detail-wrapper">
 					<h2 class="article-title"><center>{{ object.title }}</center></h2>
 		    		<div class="blog-body">
+		    			<video src="{{ post.video.url }}" controls></video>
 				    	<p class="article-content">{{ object.content|safe }}</p>
 		    		</div>
 				</article>
