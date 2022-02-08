@@ -129,7 +129,7 @@ a:hover {
 /*** Blog Home **/
 
 .about-home-info {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-bottom: 3rem;
   margin-top: 6rem;
   border: 1px ridge rgba(0,0,0,.125);
@@ -137,6 +137,7 @@ a:hover {
   padding-bottom: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
+
 }
 
 .container-wrapper {
@@ -169,7 +170,7 @@ a.home-categories{
   height: 200px;
   border: 1px solid rgba(0, 0, 0, .125);
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 20px;
   text-decoration: none;
   font-weight: 500;

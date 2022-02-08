@@ -63,7 +63,7 @@ class TradingListView(ListView):
         	context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         	
-        	context['title'] = 'Trading Notes'
+        	context['title'] = 'Trading Concepts'
         	return context
 
 
@@ -78,7 +78,7 @@ class DeFiListView(ListView):
         	context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         	
-        	context['title'] = 'DeFi Notes'
+        	context['title'] = 'DeFi Fundamentals'
         	return context
 
 class ProtocolListView(ListView):
