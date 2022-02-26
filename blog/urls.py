@@ -1,19 +1,17 @@
 from django.urls import path, include
-from .views import TradingListView, TradingDetailView, ContactCreateView, DeFiListView, DeFiDetailView, ProtocolListView, ProtocolDetailView, BlockchainListView, BlockchainDetailView
+from .views import InvestingListView, InvestingDetailView, ContactCreateView, ResearchListView, ResearchDetailView, ProtocolListView, ProtocolDetailView
 from . import views
 
 
 urlpatterns = [
 	path('', views.home, name='blog-home'),
 	# path('about/', views.about, name='blog-about'),
-	path('trading/', TradingListView.as_view(), name="blog-trading"),
-	path('defi/', DeFiListView.as_view(), name="blog-defi"),
-	path('blockchain/', BlockchainListView.as_view(), name="blog-blockchain"),
+	path('investing/', InvestingListView.as_view(), name="blog-investing"),
+	path('research/', ResearchListView.as_view(), name="blog-researches"),
 	path('protocols/', ProtocolListView.as_view(), name="blog-protocols"),
 	path('resources/', views.resources, name='blog-resources'),
-	path('trading/<slug:slug>/', TradingDetailView.as_view(), name='trading-detail'),
-	path('defi/<slug:slug>/', DeFiDetailView.as_view(), name='defi-detail'),
-	path('blockchain/<slug:slug>/', BlockchainDetailView.as_view(), name='blockchain-detail'),
+	path('investing/<slug:slug>/', InvestingDetailView.as_view(), name='investing-detail'),
+	path('research/<slug:slug>/', ResearchDetailView.as_view(), name='research-detail'),
 	path('protocols/<slug:slug>/', ProtocolDetailView.as_view(), name='protocol-detail'),
 	path('contact/', ContactCreateView.as_view(), name='blog-contact'),
 	path('privacy/', views.privacy, name='blog-privacy'),

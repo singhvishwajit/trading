@@ -1,21 +1,31 @@
 {% extends "blog/base.html" %}
 {% load static %}
-{% block content %}  
+{% block content %}
     <div class="about-home-info">
         <div class="about-image">
             <center><img class="account-img" src="{% static 'vs.jpg' %}"></center>
         </div>
         <div class="about-content">
             <p>Hi there - I am an independent DeFi researcher, analyst and trader. On this blog, I share my notes and resources on DeFi, trading, and investing.</p>
-            <p>Interests: Philosophy, Mathematics, Finance, Psychology</p>
+            <p>Interests: Programming, Finance, Mathematics, Philosophy, Psychology</p>
             <p>Assignments: DeFi Innovation Research, Crypto Asset Analysis, Trading Strategies</p>
             <p>Programming: Python, Django, NumPy, Pandas</p>
         </div>
     </div>
-    <div class="container-wrapper">
-        <a class="home-categories" href="{% url 'blog-defi' %}">DeFi Fundamentals</a>
-        <a class="home-categories" href="{% url 'blog-protocols' %}">DeFi Protocols</a> 
-    </div>
+
+        <div class="container-wrapper">
+            <a class="home-categories" href="{% url 'blog-researches' %}">
+               <div>
+                    <h3>Research</h3>
+                </div>
+            </a>
+            <a class="home-categories" href="{% url 'blog-protocols' %}">
+                <div><h3>Protocols</h3></div>
+            </a>
+            <a class="home-categories" href="{% url 'blog-investing' %}">
+                <div><h3>Investing</h3></div>
+            </a> 
+        </div>
+
 {% endblock content %}
 
-a

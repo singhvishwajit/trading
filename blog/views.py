@@ -1,19 +1,13 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from .models import Trading, DeFi, Protocol, Contact, Blockchain
+from .models import Investing, Research, Protocol, Contact
 from django.views.generic import ListView, DetailView, CreateView
 
 def home(request):
-	context = {
-		'tradings': Trading.objects.all() [:4]
-	}
-	return render(request, 'blog/home.html', context)
-
-# def about(request):
-# 	return render(request, 'blog/about.html', {'title': 'About'})
-
-# def projects(request):
-# 	return render(request, 'blog/projects.html', {'title': 'Projects'})
+	# context = {
+	# 	'tradings': Trading.objects.all() [:4]
+	# }
+	return render(request, 'blog/home.html')
 
 def resources(request):
 	return render(request, 'blog/resources.html', {'title': 'Resources'})
@@ -25,17 +19,14 @@ def terms(request):
 	return render(request, 'blog/terms.html', {'title': 'Terms of Use'})
 
 
-class TradingDetailView(DetailView):
-	model = Trading
+class InvestingDetailView(DetailView):
+	model = Investing
 
-class DeFiDetailView(DetailView):
-	model = DeFi
+class ResearchDetailView(DetailView):
+	model = Research
 
 class ProtocolDetailView(DetailView):
 	model = Protocol
-
-class BlockchainDetailView(DetailView):
-	model = Blockchain
 
 class ContactCreateView(CreateView):
     model = Contact
@@ -52,33 +43,33 @@ def ContactSuccess(request):
 # 	}
 # 	return render(request, 'blog/articles.html', context)
 
-class TradingListView(ListView):
-	model = Trading
-	template_name = 'blog/trading.html' # <app>/<model>_<viewtype>.html
-	context_object_name = 'tradings'
+class InvestingListView(ListView):
+	model = Investing
+	template_name = 'blog/investing.html' # <app>/<model>_<viewtype>.html
+	context_object_name = 'investings'
 	ordering = ['-date_posted']
-	# paginate_by = 6
+	paginate_by = 6
 	def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         	context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         	
-        	context['title'] = 'Trading Concepts'
+        	context['title'] = 'Investing'
         	return context
 
 
-class DeFiListView(ListView):
-	model = DeFi
-	template_name = 'blog/defi.html' # <app>/<model>_<viewtype>.html
-	context_object_name = 'defis'
+class ResearchListView(ListView):
+	model = Research
+	template_name = 'blog/research.html' # <app>/<model>_<viewtype>.html
+	context_object_name = 'researches'
 	ordering = ['-date_posted']
-	# paginate_by = 6
+	paginate_by = 6
 	def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         	context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         	
-        	context['title'] = 'DeFi Fundamentals'
+        	context['title'] = 'Research'
         	return context
 
 class ProtocolListView(ListView):
@@ -86,25 +77,11 @@ class ProtocolListView(ListView):
 	template_name = 'blog/protocol.html' # <app>/<model>_<viewtype>.html
 	context_object_name = 'protocols'
 	ordering = ['-date_posted']
-	# paginate_by = 6
+	paginate_by = 6
 	def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         	context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         	
-        	context['title'] = 'DeFi Protocols'
-        	return context
-
-class BlockchainListView(ListView):
-	model = Blockchain
-	template_name = 'blog/blockchain.html' # <app>/<model>_<viewtype>.html
-	context_object_name = 'blockchains'
-	ordering = ['-date_posted']
-	# paginate_by = 6
-	def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        	context = super().get_context_data(**kwargs)
-        # Add in a QuerySet of all the books
-        	
-        	context['title'] = 'Blockchain Notes'
+        	context['title'] = 'Protocols'
         	return context

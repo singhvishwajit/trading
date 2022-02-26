@@ -1,7 +1,7 @@
 {% extends "blog/base.html" %}
 {% block content %}
 	<div class="articles-page">
-		<h2><center>DeFi Protocols</center></h2>
+		<h2><center>Protocols</center></h2>
 	    <div class="container-wrapper">
 	      	{% for protocol in protocols %}
 	    		<a class="protocol-wrapper" href="{% url 'protocol-detail' protocol.slug %}">

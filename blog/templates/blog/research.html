@@ -1,19 +1,19 @@
 {% extends "blog/base.html" %}
 {% block content %}
 	<div class="articles-page">
-		<h2><center>DeFi Fundamentals</center></h2>
+		<h2><center>Research</center></h2>
 	    <div class="container-wrapper">
-	      	{% for defi in defis %}
-	    		<a class="blog-wrapper" href="{% url 'defi-detail' defi.slug %}">
+	      	{% for research in researches %}
+	    		<a class="blog-wrapper" href="{% url 'research-detail' research.slug %}">
 			        <div class="blog-body">
 			            <video src="{{ post.video.url }}" controls></video>
-			            <h5>{{ defi.title }}</h5>
-			            <p class="article-content">{{ defi.details|safe }}</p>
+			            <h5>{{ research.title }}</h5>
+			            <p class="article-content">{{ research.details|safe }}</p>
 			        </div>
 	    		</a>
 	  		{% endfor %}
 		</div>
-<!-- 	 	<div class="paginator">
+	 	<div class="paginator">
 			{% if is_paginated %}
 		    	{% if page_obj.has_previous %}
 		        	<a class="btn btn-outline-dark" href="?page=1">First</a>
@@ -32,7 +32,7 @@
 		        	<a class="btn btn-outline-dark" href="?page={{ page_obj.next_page_number }}">Next</a>
  		        	<a class="btn btn-outline-dark" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
 			    {% endif %}
-		    {% endif %} -->
-		<!-- </div> --> 
+		    {% endif %}
+		</div> 
 	</div>
 {% endblock content %}

@@ -1,14 +1,14 @@
 {% extends "blog/base.html" %}
 {% block content %}
 	<div class="articles-page">
-		<h2><center>Blockchain Fundamentals</center></h2>
+		<h2><center>Investing</center></h2>
 	    <div class="container-wrapper">
-	      	{% for blockchain in blockchains %}
-	    		<a class="blog-wrapper" href="{% url 'blockchain-detail' blockchain.slug %}">
+	      	{% for investing in investings %}
+	    		<a class="blog-wrapper" href="{% url 'investing-detail' investing.slug %}">
 			        <div class="blog-body">
-
-			            <h5>{{ blockchain.title }}</h5>
-			            <p class="article-content">{{ blockchain.details|safe }}</p>
+			        	<video src="{{ post.video.url }}" controls></video>
+			            <h5>{{ investing.title }}</h5>
+			            <p class="article-content">{{ investing.details|safe }}</p>
 			        </div>
 	    		</a>
 	  		{% endfor %}
