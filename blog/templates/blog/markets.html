@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+	<div class="articles-page">
+		<table id="markets">
+			<tr>
+				<th>Name</th>
+				<th>Symbol</th>
+				<th>Price</th>
+				<th>24h H</th>
+				<th>24h L</th>
+				<th>24h %</th>
+				<th>Market Capitalization</th>
+				{% for i in data %}
+			</tr>
+			<tr>
+				<td>{{ i.name }}</td>
+				<td>{{ i.symbol.upper }}</td>
+				<td>${{ i.current_price }}</td>
+				<td>${{ i.high_24h }}</td>
+				<td>${{ i.low_24h }}</td>
+				<td>{{ i.price_change_percentage_24h }}%</td>
+				<td>${{ i.market_cap }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock content %}

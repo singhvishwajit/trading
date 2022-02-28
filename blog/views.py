@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import requests
 from django.core.paginator import Paginator
 from .models import Investing, Research, Protocol, Contact
 from django.views.generic import ListView, DetailView, CreateView
@@ -18,6 +19,10 @@ def privacy(request):
 def terms(request):
 	return render(request, 'blog/terms.html', {'title': 'Terms of Use'})
 
+def markets(request):
+	api_url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
+	data = requests.get(api_url).json()
+	return render(request, 'blog/markets.html', {'data': data})
 
 class InvestingDetailView(DetailView):
 	model = Investing
