@@ -1,6 +1,5 @@
 from django.shortcuts import render
 import requests
-import pandas as pd
 import math
 from django.core.paginator import Paginator
 from .models import Investing, Research, Protocol, Contact, Category
