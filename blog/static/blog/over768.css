@@ -1,8 +1,8 @@
 /***** Home Page *****/
 
 .about-home-info {
-	display: flex;
-	flex-direction: row-reverse;
+/*	display: flex;
+	flex-direction: row-reverse;*/
 }
 
 .about-content {

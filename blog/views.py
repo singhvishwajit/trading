@@ -1,7 +1,9 @@
 from django.shortcuts import render
 import requests
+import pandas as pd
+import math
 from django.core.paginator import Paginator
-from .models import Investing, Research, Protocol, Contact
+from .models import Investing, Research, Protocol, Contact, Category
 from django.views.generic import ListView, DetailView, CreateView
 
 def home(request):
@@ -13,6 +15,14 @@ def home(request):
 def resources(request):
 	return render(request, 'blog/resources.html', {'title': 'Resources'})
 
+def algorithms(request):
+	api_url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=125&sparkline=false'
+	data = requests.get(api_url).json()
+	context = {
+	'data': data,
+	}
+	return render(request, 'blog/algorithms.html', context)
+
 def privacy(request):
 	return render(request, 'blog/privacy.html', {'title': 'Privacy'})
 
@@ -20,9 +30,24 @@ def terms(request):
 	return render(request, 'blog/terms.html', {'title': 'Terms of Use'})
 
 def markets(request):
-	api_url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
+	api_defi_url = 'https://api.coingecko.com/api/v3/global/decentralized_finance_defi'
+	defi = requests.get(api_defi_url).json()
+	api_url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false'
 	data = requests.get(api_url).json()
-	return render(request, 'blog/markets.html', {'data': data})
+	api_overall_url = 'https://api.coingecko.com/api/v3/global'
+	overall = requests.get(api_overall_url).json()
+	context = {
+		'data': data,
+		'defi': defi,
+		'overall': overall,
+	}
+
+	return render(request, 'blog/markets.html', context)
+
+def news(request):
+	api_news = 'https://data.messari.io/api/v1/news'
+	news = requests.get(api_news).json()
+	return render(request, 'blog/news.html', {'news': news})
 
 class InvestingDetailView(DetailView):
 	model = Investing

@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="articles-page">
+	<h2>Algorithms</h2>
+	<br>
+	<h4>Equal Weight Investment Strategy</h4>
+	<p>Below you will be able to obtain the output of an Equal-Weight Investment Strategy for Top 200 cryptocurrencies. You will be required to enter the amount you are willing to invest i.e, your portfolio size. The algorithm will then calculate the number of tokens you need to purchase for an equal-weight investment strategy. You can then download the output in an excel file for your use.</p>
+	<h5>List of Top 200 Cryptocurrencies</h5>
+	<br>
+	<table id="markets">
+		<tr>
+			<th>Name</th>
+			<th>Ticker</th>
+			<th>Current Price</th>
+			<th>Market Capitalization</th>
+			<th>Number of Tokens to Buy</th>
+			{% for i in data %}
+		</tr>
+		<tr>
+			<td>{{ i.name }}</td>
+			<td>{{ i.symbol.upper }}</td>
+			<td>${{ i.current_price }}</td>
+			<td>${{ i.market_cap }}</td>
+			<td>{{ 'N/A' }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<br>
+	<p>
+
+</div>
+{% endblock content %}

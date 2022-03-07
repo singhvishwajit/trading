@@ -1,6 +1,6 @@
 from django.contrib import admin
 from tinymce.widgets import TinyMCE
-from .models import Investing, Research, Protocol
+from .models import Investing, Research, Protocol, Contact
 from django.db import models
 
 
@@ -48,6 +48,17 @@ class ProtocolAdmin(admin.ModelAdmin):
     models.TextField: {'widget': TinyMCE()}
     }
 
+
+class ContactAdmin(admin.ModelAdmin):
+       fieldsets = [
+        ("Name", {"fields": ["name"]}),
+        ("Email", {"fields": ["email"]}),
+        ("Subject", {"fields": ["subject"]}),
+        ("Message", {"fields": ["message"]}),
+    ]
+
+
 admin.site.register(Investing, InvestingAdmin)
 admin.site.register(Research, ResearchAdmin)
 admin.site.register(Protocol, ProtocolAdmin)
+admin.site.register(Contact, ContactAdmin)

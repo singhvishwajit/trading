@@ -1,7 +1,15 @@
 {% extends "blog/base.html" %}
+{% load humanize %}
 {% load static %}
 {% block content %}
 	<div class="articles-page">
+		<div class="about-home-info">
+			<h2 class="home-summary"><center>Market Summary</center></h2>
+			<p>Total active cryptocurrencies: {{ overall.data.active_cryptocurrencies }}</p>
+			<p>Total ETH market capitalization: {{ defi.data.eth_market_cap|floatformat:2 }}</p>
+			<p>Total DeFi market capitalization: {{ defi.data.defi_market_cap|floatformat:2 }}</p>
+			<p>DeFi Top Coin in last 24h: {{ defi.data.top_coin_name }}</p>
+        </div>
 		<table id="markets">
 			<tr>
 				<th>Name</th>

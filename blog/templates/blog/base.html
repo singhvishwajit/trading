@@ -1,3 +1,4 @@
+{% load humanize %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +22,7 @@
   {% if title %}
     <title>Vishwajit Singh - {{ title }}</title>
   {% else %}
-    <title>Vishwajit Singh - DeFi Research | Analysis | Investing </title>
+    <title>Vishwajit Singh - DeFi Research | Asset Analysis | Investing  </title>
   {% endif %}
 </head>
 <body>
@@ -34,7 +35,7 @@
             </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav ml-auto">
-<!--                 <a class="nav-item nav-link" href="{% url 'blog-markets' %}">Markets</a> -->
+<!--                 <a class="nav-item nav-link" href="{% url 'blog-markets' %}">Home</a> -->
                 <a class="nav-item nav-link" href="{% url 'blog-researches' %}">Research</a>
                 <a class="nav-item nav-link" href="{% url 'blog-protocols' %}">Protocols</a>
                 <a class="nav-item nav-link" href="{% url 'blog-investing' %}">Investing</a>
@@ -62,7 +63,7 @@
           <div class="footer-column-one">
             <h5>Vishwajit Singh</h5>
             <br>
-            <p>DeFi research, asset analysis & investing</p>
+            <p>DeFi Research | Asset Analysis | Investing</p>
                 
           </div>
 

@@ -64,6 +64,7 @@ TINYMCE_DEFAULT_CONFIG = {
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
+    'algo.apps.AlgoConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -71,6 +72,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'storages',
     'tinymce',
 ]
@@ -176,3 +178,9 @@ AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 django_heroku.settings(locals())
+
+
+USE_THOUSAND_SEPARATOR = True
+THOUSAND_SEPARATOR = ','
+DECIMAL_SEPARATOR = '.'
+NUMBER_GROUPING = 3
