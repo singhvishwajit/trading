@@ -27,6 +27,16 @@ a.home-categories{
   text-align: center;
 }
 
+a.investing-categories{
+	width: 32%;
+	height: 200px;
+	border: 1px solid rgba(0, 0, 0, .125);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 3.5rem;
+  text-align: center;
+}
+
 .container-wrapper .nograde-home-wrapper {
   width: 30%;
 }
